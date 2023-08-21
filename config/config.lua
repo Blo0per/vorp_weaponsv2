@@ -1,55 +1,69 @@
-
 Config = {
 
+    -- Keys for action buttons
     keys = {
-    -- change the hashes to the keys u want, do not change the writings in qoutes. for example if u wana change B do ["B"] = (CHANGE THIS 0x8AAA0AD4), do not change whats inside those brackets > ["B"]
-    ["G"] = 0x760A9C6F,
-    ["1"] = 0xE6F612E4,
-    ["2"] = 0x1CE6D9EB,
-    ["3"] = 0x4F49CC4C,
-    ["4"] = 0x8F9F9E58
-
+        ["G"] = 0x760A9C6F,
+        ["1"] = 0xE6F612E4,
+        ["2"] = 0x1CE6D9EB,
+        ["3"] = 0x4F49CC4C,
+        ["4"] = 0x8F9F9E58
     },
-    ---------------------- 
-    syndual = false,--- always false 
-    -----------------------
-    updatedinventoryammo = true, -- use if using updated inventory with new ammo system 
 
-    adminwebhook = "https://discord.com/api/webhooks/792119960432148480/pe_FudhkrXZTQsOTRPimLj569T0kwLf4E0RFhLIz1nwe-XTZ_ROFfEIUVxaHOWrSoAEw",
-    jobonly = true, -- only players with mentioned jobs below can access crafting/customization station
-    job ={ "gunsmith", "rguns"},
+    -- Syndicate dual state (always "false")
+    syndual = false,
+
+    -- Updated inventory-related ammo system
+    updatedinventoryammo = true,
+
+    -- Discord webhook for admin events
+    adminwebhook = "INSERT_ADMIN_WEBHOOK_URL_HERE",
+
+    -- Only specific jobs can access crafting and customization stations
+    jobonly = true,
+    job = { "gunsmith", "rguns" },
+
+    -- Minimum job ranks for customization and crafting
     jobrankcustomization = 2,
     jobrankcrafting = 1,
-    craftingcost =  false,
 
-    weaponshops = true, -- endable or disable weapon shops
+    -- Crafting cost settings
+    craftingcost = false,
 
-    craftinganimations = "WORLD_HUMAN_CROUCH_INSPECT", -- animation for crafting
-    customizationanimation = "WORLD_HUMAN_WRITE_NOTEBOOK", -- animations for customizations
+    -- Weapon shops status (enable or disable)
+    weaponshops = true,
 
+    -- Crafting animation
+    craftinganimations = "WORLD_HUMAN_CROUCH_INSPECT",
+
+    -- Customization animation
+    customizationanimation = "WORLD_HUMAN_WRITE_NOTEBOOK",
+
+    -- Customization station locations
     customizationLocations = {
-        Valentine = {	   
-            Pos = {x= -277.22, y=778.922, z=119.50}, -- location weapon customization station
-            Pos2 = {x= -276.47, y=778.922, z=119.80}, -- location spawned weapon 3d model
+        Valentine = {
+            Pos = { x = -277.22, y = 778.922, z = 119.50 },
+            Pos2 = { x = -276.47, y = 778.922, z = 119.80 },
         },
-        Rhodes = {	   
-            Pos = {x= 1327.09, y=-1321.91, z=77.88}, -- location weapon customization station
-            Pos2 = {x= 1326.09, y=-1321.91, z=78.28}, -- location spawned weapon 3d model
-        },
-    },
-
-    craftinglocation = { 
-        Valentine = {	   
-            Pos = {x= -277.0, y=780.689, z=119.68}, -- location weapon crafting station
-        },
-        Rhodes = {	   
-            Pos = {x= 1329.68, y=-1320.9, z=77.88}, -- location weapon crafting station
+        Rhodes = {
+            Pos = { x = 1327.09, y = -1321.91, z = 77.88 },
+            Pos2 = { x = 1326.09, y = -1321.91, z = 78.28 },
         },
     },
 
+    -- Crafting station locations
+    craftinglocation = {
+        Valentine = {
+            Pos = { x = -277.0, y = 780.689, z = 119.68 },
+        },
+        Rhodes = {
+            Pos = { x = 1329.68, y = -1320.9, z = 77.88 },
+        },
+    },
 
-    ----------- DO NOT CHANGE THE LABELS IN THE WEPCOMP.JSON FILE ! IF YOU SO YOU WILL BREAK THE SCRIPT!!!!!!!!!!!
-    customizationcurrency = 0,-- 0 for cash, 1 for gold.
+    -- Customization currency (0 for cash, 1 for gold)
+    customizationcurrency = 0,
+
+    -- Prices for different customizations and features (don't touch)
     price = {
         variant = 100,
         griptype = 20,
@@ -73,5 +87,3 @@ Config = {
         iron = 10
     }
 }
-
----------------------------------------------------------
